@@ -87,4 +87,47 @@ void hDepan(){
 
 void hBelakang(){
   Node *bantu;
+  bantu = head;
+  if (panjang == 0){
+    cout<<"Data Kosong\n";
+  }
+  else if(panjang == 1) {
+    head = NULL;
+  }
+  else{
+    for(int i=0;i<panjang;i++){
+      if(bantu->next->next == head){
+        bantu->next = head;
+        break;
+      }
+      bantu = bantu->next;
+    }
+    
+  }
+  panjang--;
+}
+
+void iSetelah(int databaru,int pos){
+  if (pos >= panjang){
+    cout<<"Maaf Posisi Belum Ada\n";
+  }
+  else {
+    Node *bantu,*baru;
+    baru = new Node;
+    baru->data = databaru;
+    
+    bantu = head;
+    for (int i=0;i<pos;i++){
+      bantu = bantu->next;
+    }
+    baru->next = bantu->next;
+    bantu->next = baru;
+    panjang++;
+  }
   
+}
+
+void iSebelum(int databaru,int pos){
+  if (pos >= panjang){
+    cout<<"Maaf Posisi Belum Ada\n";
+  }
