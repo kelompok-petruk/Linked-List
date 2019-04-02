@@ -131,4 +131,34 @@ void iSebelum(int databaru,int pos){
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
   }
-  
+else if(pos === 0){
+  iDepan (databaru);
+}
+  else {
+    Node *bantu,*baru;
+    baru = new Node;
+    baru->data = data baru;
+    
+    bantu = head;
+    for(int i=0;i<pos-1;i++){
+      bantu = bantu->next;
+    }
+    baru->next = bantu->next;
+    bantu->next = baru;
+    panjang++;
+  }
+}
+
+
+void cData(){
+  if (panjang == 0) {
+    cout<<"Data Kosong\n";
+  }
+  node *bantu;
+  bantu = head;
+  for(int i=0;i<panjang;i++){
+    cout<<bantu->data<<" ";
+    bantu = bantu->next;
+  }
+  cout<<endl;
+}
