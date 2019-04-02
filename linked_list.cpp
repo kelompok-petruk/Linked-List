@@ -84,3 +84,7 @@ void hDepan(){
   }
   panjang --;
 }
+
+void hBelakang(){
+  Node *bantu;
+  
