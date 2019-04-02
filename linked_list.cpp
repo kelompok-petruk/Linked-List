@@ -131,3 +131,4 @@ void iSebelum(int databaru,int pos){
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
   }
+  
