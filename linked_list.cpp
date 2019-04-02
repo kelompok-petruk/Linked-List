@@ -162,3 +162,75 @@ void cData(){
   }
   cout<<endl;
 }
+
+
+void cDatake(int datake) {
+  if (panjang == 0) {
+    cout<<"tidak ada data\n";
+  }
+  else if (datake >= panjang) {
+    cout<<"maaf data yang anda minta melebihi batas\n";}
+  else {
+    Node *bantu;
+    bantu = head;
+    for (int i=0;i<=datake;i++){
+      if ( i == datake ){
+        cout<<bantu->data;}
+      bantu = bantu->next;
+    }
+  }
+}
+
+
+
+void hDatake(int datake) {
+  if (panjang == 0) {
+    cout<<"tidak ada data\n";
+  }
+  else if (datake >= panjang) {
+    cout<<"maaf banyak data hanya "<<panjang<<"\n";
+  }
+  else if (datake == 0){
+    hDepan();
+  }
+  else {
+    Node *bantu;
+    bantu = head;
+    for (int i=0;i<datake-1;i++) {
+      bantu = bantu->next;
+    }
+    bantu->next = bantu->next->next;
+    panjang--;
+    
+  }
+  
+}
+
+
+
+
+int main () {
+  iDepan(1);
+  cData();
+  iBelakang(2);
+  cData();
+  iSetelah(3,1);
+  cData();
+  iSebelum(4,0);
+  cData();
+  hBelakang();
+  cData();
+  hDepan();
+  cData();
+  hDatake(1);
+  cData();
+  cout<<endl;
+  iDepan(1);
+  iDepan(2);
+  iBelakang(3);
+  
+  for (int i=0;i<panjang;i++) {
+    cDatake(i);
+    cout<<endl;
+  }
+}
