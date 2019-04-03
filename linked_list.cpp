@@ -13,11 +13,11 @@ struct Node {
 };
 
 int panjang;
-Node *head = NULL;
+Node *head = NULL;//mendefinisikan bahwa data awal masih kosong
 
 
 
-void iDepan (int databaru){
+void iDepan (int databaru){  //iDepan : input data didepan
   Node *baru, *bantu;
   baru = new Node;
   baru->data = databaru;
@@ -43,7 +43,7 @@ void iDepan (int databaru){
 
 
 
-void iBelakang (int databaru){
+void iBelakang (int databaru){  // iBelakang : input data dibelakang
   Node *baru, *bantu;
   baru = new Node ;
   baru->data = databaru;
@@ -71,7 +71,7 @@ void iBelakang (int databaru){
 
 
 
-void hDepan(){
+void hDepan(){ //hDepan : hapus data di depan
   Node *bantu;
   bantu = head ;
   if (panjang == 0){
@@ -95,7 +95,7 @@ void hDepan(){
 
 
 
-void hBelakang(){
+void hBelakang(){ // hBelakang : hapus data di belakang
   Node *bantu;
   bantu = head;
   if (panjang == 0){
@@ -119,7 +119,7 @@ void hBelakang(){
 
 
 
-void iSetelah(int databaru,int pos){
+void iSetelah(int databaru,int pos){ // iSetelah : input nilai P, setelah data ke-N
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
   }
@@ -141,7 +141,7 @@ void iSetelah(int databaru,int pos){
 
 
 
-void iSebelum(int databaru,int pos){
+void iSebelum(int databaru,int pos){  // iSebelum : input nilai P, sebelum data ke-N
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
   }
@@ -166,7 +166,7 @@ else if(pos == 0){
 
 
 
-void cData(){
+void cData(){  // cData : cetak semua data
   if (panjang == 0) {
     cout<<"tidak ada data\n";
   }
@@ -182,7 +182,7 @@ void cData(){
 
 
 
-void cDatake(int datake) {
+void cDatake(int datake) { // cDatake : cetak data ke-N
   if (panjang == 0) {
     cout<<"tidak ada data\n";
   }
@@ -201,7 +201,7 @@ void cDatake(int datake) {
 
 
 
-void hDatake(int datake) {
+void hDatake(int datake) {  // hData: hapus data ke-N
   if (panjang == 0) {
     cout<<"tidak ada data\n";
   }
