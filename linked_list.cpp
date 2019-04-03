@@ -75,7 +75,7 @@ void hDepan(){
   Node *bantu;
   bantu = head ;
   if (panjang == 0){
-    cout<<"Data kosong \n";
+    cout<<"Data tidak ditemukan \n";
   }
   else if (panjang ==1){
     head = NULL;
@@ -99,7 +99,7 @@ void hBelakang(){
   Node *bantu;
   bantu = head;
   if (panjang == 0){
-    cout<<"Data Kosong\n";
+    cout<<"Data tidak ditemukan\n";
   }
   else if(panjang == 1) {
     head = NULL;
@@ -168,7 +168,7 @@ else if(pos == 0){
 
 void cData(){
   if (panjang == 0) {
-    cout<<"Data Kosong\n";
+    cout<<"tidak ada data\n";
   }
   Node *bantu;
   bantu = head;
