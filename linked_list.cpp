@@ -4,7 +4,7 @@
 //Rena Okriyani       1817051029
 
 
-#include <iostrteam>
+#include <iostream>
 using namespace std;
 
 struct Node {
@@ -14,6 +14,8 @@ struct Node {
 
 int panjang;
 Node *head = NULL;
+
+
 
 void iDepan (int databaru){
   Node *baru, *bantu;
@@ -39,11 +41,14 @@ void iDepan (int databaru){
   panjang ++;
 }
 
-void iBelakang (int dataBaru){
+
+
+void iBelakang (int databaru){
   Node *baru, *bantu;
   baru = new Node ;
   baru->data = databaru;
   
+
   if(head == NULL){
     head = baru ;
     head->next = head ;
@@ -52,6 +57,7 @@ void iBelakang (int dataBaru){
   else {
     bantu = head;
     for (int i=0; i<panjang; i++){
+      
       if (bantu->next== head){
         bantu->next = baru;
         baru->next = head;
@@ -63,8 +69,10 @@ void iBelakang (int dataBaru){
   panjang++;
 }
 
+
+
 void hDepan(){
-  Node *baru;
+  Node *bantu;
   bantu = head ;
   if (panjang == 0){
     cout<<"Data kosong \n";
@@ -84,6 +92,8 @@ void hDepan(){
   }
   panjang --;
 }
+
+
 
 void hBelakang(){
   Node *bantu;
@@ -107,6 +117,8 @@ void hBelakang(){
   panjang--;
 }
 
+
+
 void iSetelah(int databaru,int pos){
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
@@ -127,17 +139,19 @@ void iSetelah(int databaru,int pos){
   
 }
 
+
+
 void iSebelum(int databaru,int pos){
   if (pos >= panjang){
     cout<<"Maaf Posisi Belum Ada\n";
   }
-else if(pos === 0){
+else if(pos == 0){
   iDepan (databaru);
 }
   else {
     Node *bantu,*baru;
     baru = new Node;
-    baru->data = data baru;
+    baru->data = databaru;
     
     bantu = head;
     for(int i=0;i<pos-1;i++){
@@ -147,14 +161,16 @@ else if(pos === 0){
     bantu->next = baru;
     panjang++;
   }
+  
 }
+
 
 
 void cData(){
   if (panjang == 0) {
     cout<<"Data Kosong\n";
   }
-  node *bantu;
+  Node *bantu;
   bantu = head;
   for(int i=0;i<panjang;i++){
     cout<<bantu->data<<" ";
@@ -162,6 +178,8 @@ void cData(){
   }
   cout<<endl;
 }
+
+
 
 
 void cDatake(int datake) {
