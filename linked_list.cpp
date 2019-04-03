@@ -232,9 +232,9 @@ int main () {
   cData();
   iBelakang(2);
   cData();
-  iSetelah(3,1);
+  iSetelah(3,1);// array dimulai dari 0,(3,1) artinya input angka 3, setelah array[1]
   cData();
-  iSebelum(4,0);
+  iSebelum(4,0);// array dimulai dari 0, (4,0) artinya input angka 4, sebelum array[0]
   cData();
   hBelakang();
   cData();
